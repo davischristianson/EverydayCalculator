@@ -1,14 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".TipCalculatorFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tip Calculator" />
+        android:id="@+id/tvIntroMessage"
+        android:layout_width="350dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="16dp"
+        android:text="This will help calculate how much tip you would like to leave for any
+payment such as a meal, drink or service. Just enter the cost and percent you would like to tip
+and the total percentage will be displayed."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Total Amount:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTipPercentage"
+        app:layout_constraintEnd_toStartOf="@+id/etTotalAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessage" />
+
+    <TextView
+        android:id="@+id/tvTipPercentage"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Tip Percent:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalTipAmount"
+        app:layout_constraintEnd_toStartOf="@+id/etTipPercent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
+
+    <TextView
+        android:id="@+id/tvTotalTipAmount"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Tip Amount:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvTipAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercentage" />
+
+    <EditText
+        android:id="@+id/etTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="ex. 40"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalAmount" />
+
+    <EditText
+        android:id="@+id/etTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="ex. 5"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTipPercentage"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercentage" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:hint="ex. 2.00"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalTipAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalTipAmount" />
+
+    <Button
+        android:id="@+id/btnCalculateTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Tip"
+        android:onClick="calculateTip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessage"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <TextView
+        android:id="@+id/tvPercentSign"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:text="%"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/etTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
