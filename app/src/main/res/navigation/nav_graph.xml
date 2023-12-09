@@ -21,4 +21,9 @@
         android:name="com.example.everydaycalculator.TipCalculatorFragment"
         android:label="Tip Calculator"
         tools:layout="@layout/fragment_tip_calculator" />
+    <fragment
+        android:id="@+id/temperatureCalculatorFragment"
+        android:name="com.example.everydaycalculator.TemperatureCalculatorFragment"
+        android:label="Temperature Calculator"
+        tools:layout="@layout/fragment_temperature_calculator" />
 </navigation>

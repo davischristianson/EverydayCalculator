@@ -9,6 +9,10 @@
             android:id="@+id/tipCalculatorFragment"
             android:icon="@android:drawable/ic_menu_today"
             android:title="Tip Calculator" />
+        <item
+            android:id="@+id/temperatureCalculatorFragment"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="Temperature Calculator " />
     </group>
 
     <item android:title="Support">

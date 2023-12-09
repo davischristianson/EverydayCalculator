@@ -7,7 +7,7 @@
     tools:context=".TipCalculatorFragment">
 
     <TextView
-        android:id="@+id/tvIntroMessage"
+        android:id="@+id/tvIntroMessageTip"
         android:layout_width="350dp"
         android:layout_height="142dp"
         android:layout_marginTop="16dp"
@@ -15,6 +15,7 @@
 payment such as a meal, drink or service. Just enter the cost and percent you would like to tip
 and the total percentage will be displayed."
         android:textSize="20sp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +32,7 @@ and the total percentage will be displayed."
         app:layout_constraintEnd_toStartOf="@+id/etTotalAmount"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessageTip" />
 
     <TextView
         android:id="@+id/tvTipPercentage"
@@ -105,7 +106,7 @@ and the total percentage will be displayed."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessage"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessageTip"
         app:layout_constraintVertical_bias="0.927" />
 
     <TextView
@@ -118,6 +119,6 @@ and the total percentage will be displayed."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/etTipPercent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessageTip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

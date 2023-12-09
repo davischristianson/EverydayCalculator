@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TemperatureCalculatorFragment"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="-72dp">
+
+
+    <TextView
+        android:id="@+id/tvIntroMessageTemp"
+        android:layout_width="350dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="16dp"
+        android:text="A temperature calculator that will help convert between 3
+different units of measuring temperature."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnTemperatureOne"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:entries="@array/temperature_array"
+        app:layout_constraintBottom_toTopOf="@+id/spnTemperatureTwo"
+        app:layout_constraintEnd_toStartOf="@+id/etTemperatureOne"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntroMessageTemp" />
+
+    <Spinner
+        android:id="@+id/spnTemperatureTwo"
+        android:layout_width="141dp"
+        android:layout_height="47dp"
+        android:entries="@array/temperature_array"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculateTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/tvFinalTemperature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnTemperatureOne" />
+
+    <EditText
+        android:id="@+id/etTemperatureOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="45.5"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spnTemperatureOne"
+        app:layout_constraintTop_toTopOf="@+id/spnTemperatureOne" />
+
+    <Button
+        android:id="@+id/btnCalculateTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Calculate Temperature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFinalTemperature"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spnTemperatureTwo"
+        app:layout_constraintTop_toTopOf="@+id/spnTemperatureTwo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
