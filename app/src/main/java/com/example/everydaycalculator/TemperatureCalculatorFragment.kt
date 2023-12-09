@@ -68,9 +68,7 @@ class TemperatureCalculatorFragment : Fragment() {
             if(selectedSpinnerOne == "Kelvin" && selectedSpinnerTwo == "Kelvin") {
                 convertedTemperature.setText(tempToConvert)
             }
-
         }
-
 
         return view
     }
